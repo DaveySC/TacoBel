@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IntegrationService/IntegrationService.iml" filepath="$PROJECT_DIR$/IntegrationService/IntegrationService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Taco/TacoBel.iml" filepath="$PROJECT_DIR$/Taco/TacoBel.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:tackDB
+    driver-class-name: org.h2.Driver
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    username: khrisanfov.leha@bk.ru
+    password: t0qSVSZvopNNsMvhBycJ
+    protocol: smtp
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.mail.ru
+
+management:
+  health:
+    mail:
+      enabled:
+
+
+custom:
+  url: localhost:8080/confirm?toke=
+
+

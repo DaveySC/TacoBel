@@ -1,0 +1,13 @@
+custom:
+  email:
+    host: smtp.gmail.com
+    mailbox: INBOX
+    username: springboottestemailsubmiter@gmail.com
+    password: twujlqouauiyfvkz
+    poll-rate: 10000
+    api:
+      url: http://localhost:8080/orders/fromEmail
+
+spring:
+  main:
+    web-application-type: none
