@@ -60,8 +60,7 @@ public class ConstructorController {
     }
 
     @PostMapping()
-    public String processingTaco(@ModelAttribute Taco taco, @ModelAttribute TacoOrder tacoOrder) {
-        System.out.println(taco.getIngredients());
+    public String processingTaco(@ModelAttribute Taco taco, @SessionAttribute("tacoOrder") TacoOrder tacoOrder) {
         tacoOrder.addTaco(tacoRepository.save(taco));
 
         return "redirect:/order";

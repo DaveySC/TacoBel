@@ -29,7 +29,7 @@ public class Taco {
     @Max(15)
     private String name;
     @NotEmpty
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.MERGE})
     private List<Ingredient> ingredients = new ArrayList<>();
 
     private Date createdAt = new Date();
@@ -41,4 +41,5 @@ public class Taco {
     public Taco(String name) {
         this.name = name;
     }
+
 }

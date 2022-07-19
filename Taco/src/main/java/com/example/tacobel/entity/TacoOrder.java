@@ -45,9 +45,8 @@ public class TacoOrder {
     @NotEmpty
     private String expireDate;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = {CascadeType.MERGE })
     List<Taco> tacos = new ArrayList<>();
-
 
     public void addTaco(Taco taco) {
         this.tacos.add(taco);
@@ -55,4 +54,6 @@ public class TacoOrder {
 
     @ManyToOne
     private User user;
+
+    private boolean status = false;
 }

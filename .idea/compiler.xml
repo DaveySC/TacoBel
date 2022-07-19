@@ -7,16 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="DeliveryService" />
         <module name="IntegrationService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DeliveryService" target="17" />
       <module name="IntegrationService" target="17" />
       <module name="TacoBel" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DeliveryService" options="-parameters" />
       <module name="IntegrationService" options="-parameters" />
     </option>
   </component>
