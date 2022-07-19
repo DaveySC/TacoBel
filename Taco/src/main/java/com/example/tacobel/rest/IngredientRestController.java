@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 @RequestMapping(path="/api/ingredients", produces="application/json")
-public class IngredientController {
+public class IngredientRestController {
     private IngredientRepository repo;
 
     @Autowired
-    public IngredientController(IngredientRepository repo) {
+    public IngredientRestController(IngredientRepository repo) {
         this.repo = repo;
     }
 

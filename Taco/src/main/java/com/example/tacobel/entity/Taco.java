@@ -3,7 +3,7 @@ package com.example.tacobel.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.rest.core.annotation.RestResource;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -18,7 +18,6 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@RestResource(rel="tacos", path="tacos")
 public class Taco {
 
     @Id
