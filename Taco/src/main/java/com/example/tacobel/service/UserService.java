@@ -23,6 +23,7 @@ public class UserService implements UserDetailsService {
 
     private PasswordEncoder passwordEncoder;
 
+
     @Autowired
     public void setUserRepository(UserRepository userRepository,
                                   RoleRepository roleRepository,
@@ -42,16 +43,26 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
-    @Transactional
-    public boolean saveUser(User user) {
-        if (userRepository.findByUsername(user.getUsername()) != null) {
-            return false;
-        }
-        user.setRoles(Collections.singleton(roleRepository.findByName(RoleName.USER_ROLE.name())));
+
+    private boolean saveUser(User user, RoleName roleName) {
+        if (userRepository.findByUsername(user.getUsername()) != null)  return false;
+        user.setRoles(Collections.singleton(roleRepository.findByName(roleName.name())));
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        if (roleName.equals(RoleName.ROLE_ADMIN)) user.setStatus(true);
         userRepository.save(user);
         return true;
     }
+
+    @Transactional
+    public boolean saveAdmin(User user) {
+        return saveUser(user, RoleName.ROLE_ADMIN);
+    }
+
+    @Transactional
+    public boolean saveUser(User user) {
+        return saveUser(user, RoleName.ROLE_USER);
+    }
+
 
     public boolean deleteUser(User user) {
         if (userRepository.findByUsername(user.getUsername()) == null) {
@@ -60,5 +71,9 @@ public class UserService implements UserDetailsService {
 
         userRepository.delete(user);
         return true;
+    }
+
+    public User findByUsername(String username) {
+        return this.userRepository.findByUsername(username);
     }
 }

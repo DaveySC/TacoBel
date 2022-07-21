@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DeliveryService/DeliveryService.iml" filepath="$PROJECT_DIR$/DeliveryService/DeliveryService.iml" />
       <module fileurl="file://$PROJECT_DIR$/IntegrationService/IntegrationService.iml" filepath="$PROJECT_DIR$/IntegrationService/IntegrationService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Taco/ServerAdmin/ServerAdmin.iml" filepath="$PROJECT_DIR$/Taco/ServerAdmin/ServerAdmin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerMonitoringService/ServerMonitoringService.iml" filepath="$PROJECT_DIR$/ServerMonitoringService/ServerMonitoringService.iml" />
       <module fileurl="file://$PROJECT_DIR$/Taco/TacoBel.iml" filepath="$PROJECT_DIR$/Taco/TacoBel.iml" />
     </modules>
   </component>

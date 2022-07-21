@@ -7,6 +7,9 @@
     <file url="file://$PROJECT_DIR$/DeliveryService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IntegrationService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IntegrationService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ServerMonitoringService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ServerMonitoringService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Taco/ServerMonitoringService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Taco/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Taco/src/main/resources" charset="UTF-8" />
   </component>

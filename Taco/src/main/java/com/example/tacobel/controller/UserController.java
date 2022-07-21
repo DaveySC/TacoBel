@@ -4,6 +4,7 @@ import com.example.tacobel.entity.User;
 import com.example.tacobel.exc.UserAlreadyExists;
 import com.example.tacobel.repository.UserRepository;
 import com.example.tacobel.service.EmailService;
+import com.example.tacobel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -30,10 +31,10 @@ public class UserController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    private UserRepository userService;
+    private UserService userService;
 
     @Autowired
-    public void setUserService(UserRepository userService) {
+    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 
@@ -54,7 +55,7 @@ public class UserController {
             throw new UserAlreadyExists("User with this parameters already exists");
         }
         User user = new User(username, passwordEncoder.encode(password), firstname, lastname, email, new HashSet<>());
-        userService.save(user);
+        userService.saveUser(user);
         emailService.sendEmail(user.getEmail(), user.getName());
         return "redirect:/login";
     }

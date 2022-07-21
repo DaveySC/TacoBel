@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/Taco/pom.xml" />
         <option value="$PROJECT_DIR$/IntegrationService/pom.xml" />
         <option value="$PROJECT_DIR$/DeliveryService/pom.xml" />
+        <option value="$PROJECT_DIR$/Taco/ServerMonitoringService/pom.xml" />
+        <option value="$PROJECT_DIR$/ServerMonitoringService/pom.xml" />
       </list>
     </option>
   </component>

@@ -10,18 +10,23 @@
         <module name="TacoBel" />
         <module name="DeliveryService" />
         <module name="IntegrationService" />
+        <module name="ServerMonitoringService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DeliveryService" target="17" />
+      <module name="DEP" target="17" />
       <module name="IntegrationService" target="17" />
+      <module name="ServerMonitoringService" target="17" />
       <module name="TacoBel" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DEP" options="-parameters" />
       <module name="DeliveryService" options="-parameters" />
       <module name="IntegrationService" options="-parameters" />
+      <module name="ServerMonitoringService" options="-parameters" />
       <module name="TacoBel" options="-parameters" />
     </option>
   </component>
