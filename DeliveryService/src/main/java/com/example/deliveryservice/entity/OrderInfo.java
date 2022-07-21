@@ -2,6 +2,7 @@ package com.example.deliveryservice.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.annotation.processing.Generated;
@@ -15,19 +16,21 @@ public class OrderInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty
     private Long id;
-
+    @JsonProperty
     private String name;
-
+    @JsonProperty
     private String address;
-
+    @JsonProperty
+    @Column(length = 2048)
     private String tacos;
 
-    @JsonIgnore
+    @JsonProperty
     private Calendar date = Calendar.getInstance();
 
     @ManyToOne
-    @JsonIgnore
+    @JsonProperty
     private Courier courier;
 
     public void addTime(int minutes) {

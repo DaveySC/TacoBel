@@ -24,5 +24,9 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         courierRepository.save(new Courier(null, "Danil", 0L, new ArrayList<>()));
+        courierRepository.save(new Courier(null, "Artem", 0L, new ArrayList<>()));
+        courierRepository.save(new Courier(null, "Roma", 0L, new ArrayList<>()));
+        courierRepository.save(new Courier(null, "Ira", 0L, new ArrayList<>()));
+        courierRepository.save(new Courier(null, "Anna", 0L, new ArrayList<>()));
     }
 }

@@ -10,6 +10,9 @@ import com.example.tacobel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Array;
@@ -55,4 +58,6 @@ public class ApplicationRunnerImpl implements ApplicationRunner {
 
         this.userService.saveUser(new User("TEST", "PASS", "TEST", "TEST", "email", new HashSet<>()));
     }
+
+
 }

@@ -17,6 +17,7 @@ import java.util.HashSet;
 public class UserController {
 
     private EmailService emailService;
+
     @Autowired
     public void setEmailService(EmailService emailService) {
         this.emailService = emailService;

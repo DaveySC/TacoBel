@@ -23,8 +23,7 @@ public class EmailService {
 
     public JavaMailSender emailSender;
 
-    @Value("${custom.url}")
-    String url;
+    String url = "localhost:8080/confirm?toke=" ;
 
     private static final String preparedMessage =
             "Hey, %s!\n Please, confirm your email by link bellow %S:\n ";

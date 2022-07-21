@@ -16,6 +16,9 @@
             width: 500px;
             text-align: center;
         }
+        li {
+            text-align: left;
+        }
 
     </style>
 </head>
@@ -44,7 +47,14 @@
     </nav>
 
     <div class="account">
-        <p class="h1" style="margin: 15vh" >IT IS YOUR ACCOUNT ʕ ᵔᴥᵔ ʔ</p>
+        <p class="h1" style="margin: 5vh" >IT IS YOUR ACCOUNT <br>ʕ ᵔᴥᵔ ʔ</p>
+        <ul class="list-group">
+            <li class="list-group-item" th:each="order : ${orders}" >
+                <div>Order id : <span th:text="${order.id}"></span> </div>
+                <div>Delivery time :  <span th:text="${order.date.time}"></span></div>
+                <div>Courier name :  <span th:text="${order.courier.name}"></span></div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="TacoBel" />
         <module name="DeliveryService" />
         <module name="IntegrationService" />
       </profile>
@@ -21,6 +22,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="DeliveryService" options="-parameters" />
       <module name="IntegrationService" options="-parameters" />
+      <module name="TacoBel" options="-parameters" />
     </option>
   </component>
 </project>
