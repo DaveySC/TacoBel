@@ -76,4 +76,6 @@ public class UserService implements UserDetailsService {
     public User findByUsername(String username) {
         return this.userRepository.findByUsername(username);
     }
+
+    public User findByEmail(String email) {return this.userRepository.findByEmail(email);}
 }

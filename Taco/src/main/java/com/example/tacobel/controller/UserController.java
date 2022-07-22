@@ -8,10 +8,9 @@ import com.example.tacobel.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 
 @Controller
@@ -54,10 +53,20 @@ public class UserController {
         if (userService.findByUsername(username) != null) {
             throw new UserAlreadyExists("User with this parameters already exists");
         }
-        User user = new User(username, passwordEncoder.encode(password), firstname, lastname, email, new HashSet<>());
-        userService.saveUser(user);
+        User user = new User(username, password, firstname, lastname, email, new HashSet<>());
         emailService.sendEmail(user.getEmail(), user.getName());
+        userService.saveUser(user);
         return "redirect:/login";
+    }
+
+    @GetMapping("/confirm")
+    @ResponseBody
+    public String activateAccount(@NotNull @RequestParam(defaultValue = "empty") String token) {
+        User user = userService.findByEmail(token);
+        if (user == null) return "USER NOT FOUND";
+        user.setStatus(true);
+        userService.saveUser(user);
+        return "YOUR ACCOUNT ACTIVATED";
     }
 
 

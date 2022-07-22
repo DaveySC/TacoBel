@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
   datasource:
     url: jdbc:h2:mem:tackDB
@@ -12,15 +15,14 @@ spring:
     console:
       enabled: true
   mail:
-    host: smtp.mail.ru
-    port: 465
-    username: khrisanfov.leha@bk.ru
-    password: t0qSVSZvopNNsMvhBycJ
+    host: pop.gmail.com
+    port: 587
+    username: springboottestemailsubmiter@gmail.com
+    password: juypbtdbwvbwtvsi
     protocol: smtp
     properties.mail.smtp:
       auth: true
       starttls.enable: true
-      ssl.trust: smtp.mail.ru
   thymeleaf:
     check-template: true
     check-template-location: true
@@ -31,6 +33,8 @@ spring:
     admin:
       client:
         url: http://localhost:9090
+        username: admin
+        password: 53cr3t
   application:
     name: TacoBel
 
@@ -43,3 +47,5 @@ management:
     health:
       show-details: always
 
+custom:
+  url: localhost:8080/confirm?toke=

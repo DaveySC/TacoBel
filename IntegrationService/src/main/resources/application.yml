@@ -1,10 +1,14 @@
+server:
+  port: 8082
+
 custom:
   email:
     host: smtp.gmail.com
     mailbox: INBOX
     username: springboottestemailsubmiter@gmail.com
-    password: twujlqouauiyfvkz
+    password: juypbtdbwvbwtvsi
     poll-rate: 10000
+
     api:
       url: http://localhost:8080/orders/fromEmail
 

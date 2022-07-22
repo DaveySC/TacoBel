@@ -85,6 +85,10 @@ public class User implements UserDetails {
                 password + "\n" +
                 name + "\n" +
                 secondName + "\n";
+    }
 
+    @Override
+    public int hashCode() {
+        return username.hashCode();
     }
 }

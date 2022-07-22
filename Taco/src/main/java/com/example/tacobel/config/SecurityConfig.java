@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .csrf()
                     .disable()
                 .authorizeHttpRequests()
-                    .antMatchers("/", "/h2-console/**", "/registration", "/login").permitAll()
+                    .antMatchers("/", "/h2-console/**", "/registration", "/login", "/confirm/**").permitAll()
                     .antMatchers("/actuator/**").hasAuthority("ADMIN")
                     .anyRequest().authenticated()
                     .and()
@@ -42,8 +42,4 @@ public class SecurityConfig {
     }
 
 
-    @Bean
-    public JavaMailSender javaMailSender() {
-        return new JavaMailSenderImpl();
-    }
 }
