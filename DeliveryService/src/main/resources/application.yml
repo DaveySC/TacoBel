@@ -13,3 +13,22 @@ spring:
   h2:
     console:
       enabled: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+        username: admin
+        password: 53cr3t
+        instance:
+          management-base-url: http://localhost:8081
+  application:
+    name: TacoBel
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

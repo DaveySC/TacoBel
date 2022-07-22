@@ -3,7 +3,7 @@ server:
 
 custom:
   email:
-    host: smtp.gmail.com
+    host: pop.gmail.com
     mailbox: INBOX
     username: springboottestemailsubmiter@gmail.com
     password: juypbtdbwvbwtvsi
